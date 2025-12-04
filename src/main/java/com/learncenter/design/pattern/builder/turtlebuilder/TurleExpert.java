@@ -1,29 +1,34 @@
 package com.learncenter.design.pattern.builder.turtlebuilder;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.learncenter.design.pattern.observer.Observer;
+import com.learncenter.design.pattern.service.RandomValueService;
+import com.learncenter.design.pattern.turtles.Turtle;
 
-public class TurleExpert {
 
-   public void makeNormalTurtle(TurtleBuilder builder){
+public class TurleExpert implements Observer<RandomValueService.Part> {
 
-       builder.addHeadLength(2);
+    private final TurtleBuilder builder;
 
-       builder.addNumberOffLegs(4);
-
-       builder.addHome("carapace");
-   }
-
-    public void makeWeardTurtle(TurtleBuilder builder){
-
-        builder.addHeadLength(0);
-
-        builder.addNumberOffLegs(1);
-
-        builder.addHome("mexico");
+    public TurleExpert(TurtleBuilder builder) {
+        this.builder = builder;
     }
 
+    @Override
+    public synchronized void update(RandomValueService.Part part) {
 
+        switch (part.type) {
+            case "head" -> builder.addHeadLength((int) part.value);
+            case "legs" -> builder.addNumberOffLegs((int) part.value);
+            case "home" -> builder.addHome((String) part.value);
+        }
+        System.out.println("Updated " + part.type + " to " + part.value);
+    }
 
-
-
+    public Turtle getTurtle() {
+        return builder.getTurtle();
+    }
 }
+
+
+
+

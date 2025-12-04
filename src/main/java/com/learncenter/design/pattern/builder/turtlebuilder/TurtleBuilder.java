@@ -1,10 +1,14 @@
 package com.learncenter.design.pattern.builder.turtlebuilder;
 
+import com.learncenter.design.pattern.turtles.Turtle;
+
 public interface TurtleBuilder {
 
-    public void addHeadLength(int length);
+    void addHeadLength(int length);
 
-    public void addNumberOffLegs(int legs);
+    void addNumberOffLegs(int legs);
 
-    public void addHome(String name);
+    void addHome(String name);
+
+    Turtle getTurtle();
 }

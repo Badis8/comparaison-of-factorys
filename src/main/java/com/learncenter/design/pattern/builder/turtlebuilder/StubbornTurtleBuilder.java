@@ -20,7 +20,7 @@ public class StubbornTurtleBuilder implements TurtleBuilder {
     turtle.setHome(name);
     }
 
-    Turtle getTurtle(){
+    public Turtle getTurtle(){
         return this.turtle;
     }
 }

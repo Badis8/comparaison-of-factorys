@@ -12,6 +12,12 @@ public class Turtle {
 
     }
 
+    public Turtle(int h,int n,String ho ) {
+    this.headLength=h;
+    this.numberOfLegs=n;
+    this.home = ho;
+    }
+
 
 
     public void setHeadLength(int headLength) {
@@ -35,5 +41,13 @@ public class Turtle {
 
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Turtle turtle = (Turtle) o;
+        return headLength == turtle.headLength &&
+                numberOfLegs == turtle.numberOfLegs  ;
+    }
 
 }

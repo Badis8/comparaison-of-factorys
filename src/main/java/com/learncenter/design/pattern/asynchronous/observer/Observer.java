@@ -1,4 +1,4 @@
-package com.learncenter.design.pattern.observer;
+package com.learncenter.design.pattern.asynchronous.observer;
 
 
 public interface Observer<T> {

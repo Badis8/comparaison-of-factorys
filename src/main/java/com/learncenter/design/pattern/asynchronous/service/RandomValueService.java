@@ -1,9 +1,9 @@
-package com.learncenter.design.pattern.service;
+package com.learncenter.design.pattern.asynchronous.service;
 
 
 
 
-import com.learncenter.design.pattern.observer.Observer;
+import com.learncenter.design.pattern.asynchronous.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;

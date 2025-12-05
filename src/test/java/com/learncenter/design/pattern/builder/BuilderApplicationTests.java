@@ -1,8 +1,8 @@
 package com.learncenter.design.pattern.builder;
 
-import com.learncenter.design.pattern.builder.turtlebuilder.StubbornTurtleBuilder;
-import com.learncenter.design.pattern.builder.turtlebuilder.TurleExpert;
-import com.learncenter.design.pattern.factory.StubbornTurtleFactory;
+import com.learncenter.design.pattern.synchronous.builder.turtlebuilder.StubbornTurtleBuilder;
+import com.learncenter.design.pattern.synchronous.builder.turtlebuilder.TurleExpert;
+import com.learncenter.design.pattern.synchronous.factory.StubbornTurtleFactory;
 import com.learncenter.design.pattern.turtles.Turtle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 class BuilderApplicationTests {
 
-	TurleExpert turtleExpert=new TurleExpert();
 	StubbornTurtleFactory stubbornTurtleFactory = new StubbornTurtleFactory();
 	StubbornTurtleBuilder stubbornTurtleBuilder = new StubbornTurtleBuilder();
 	Turtle expectedNormalTurtle = new Turtle(3,16,"carapace");
+	TurleExpert turtleExpert=new TurleExpert();
 
 
 	@BeforeEach
@@ -43,6 +43,21 @@ class BuilderApplicationTests {
 		assertEquals(normalTurtleFromBuilder,expectedNormalTurtle);
 
 	}
+
+	@Test
+	void shouldCreateTurtleViaBuilderAsyncronously() {
+
+
+
+	}
+
+	@Test
+	void shouldCreateTurtleViaFactoryAsyncronously() {
+
+
+
+	}
+
 
 
 

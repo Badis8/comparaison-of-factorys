@@ -37,10 +37,10 @@ The project has  two main ** packages**:
 ## unit test and goal
 
 some unit test have been implemented to show case my point , all though the sequential test does not high lights 
-the benefit of one creational pattern than the other, the aynschronous one aimes to show my three main points : 
+the benefit of one creational pattern over the other, the aynschronous one aims to show my three main points : 
 
 1) a builder has an inside reference to a product (turtle) mid creation ,and could know if they are ready to be used all thoguht not fully created , a servie might be intrested to use a turtle with just a shell
-2) additional algorithms are needed to complete the product after receiving all the  data needed to create a product (turtle), 
-3) a factory does not allow a semi foncitonal product (just a schell turtle) to be used via a service 
-4) we need to have inside knowledge of the product to know when its "ready" to be created , after collecting the asynchoronus data
-5) any improvements of the additional algorithms, from the normal factory would result into the approachign the builder facotry
+2) additional algorithms are needed to complete the product under a normal factory after receiving all the  data needed to create a product (turtle), 
+3) a normal factory does not allow a semi foncitonal product (just a schell turtle) to be used via a service 
+4) on a normal facotyr we need to have inside knowledge of the product to know when its "ready" to be created , after collecting the asynchoronus data (we dont have a in memory turtle to tell us when its ready , modifying buisness turtle logic would result to modify factorys)
+5) any improvements of the additional algorithms  from the normal factory would result into the approachign the builder facotry

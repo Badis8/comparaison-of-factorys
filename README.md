@@ -44,3 +44,5 @@ the benefit of one creational pattern over the other, the aynschronous one aims 
 3) a normal factory does not allow a semi foncitonal product (just a schell turtle) to be used via a service 
 4) on a normal facotyr we need to have inside knowledge of the product to know when its "ready" to be created , after collecting the asynchoronus data (we dont have a in memory turtle to tell us when its ready , modifying buisness turtle logic would result to modify factorys)
 5) any improvements of the additional algorithms  from the normal factory would result into the approachign the builder facotry
+
+points 2 3 4 5 are better seen under the StubbornTurtleFactory

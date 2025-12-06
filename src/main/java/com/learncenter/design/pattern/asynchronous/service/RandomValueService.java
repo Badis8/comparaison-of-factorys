@@ -1,8 +1,5 @@
 package com.learncenter.design.pattern.asynchronous.service;
 
-
-
-
 import com.learncenter.design.pattern.asynchronous.observer.Observer;
 
 import java.util.ArrayList;

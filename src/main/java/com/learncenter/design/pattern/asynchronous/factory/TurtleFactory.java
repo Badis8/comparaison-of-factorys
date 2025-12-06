@@ -4,7 +4,7 @@ import com.learncenter.design.pattern.turtles.Turtle;
 
 public interface TurtleFactory {
 
-    Turtle createNormalTurtle();
+    Turtle createUnexpectedTurtleTurtle();
 
-    Turtle createWeirdTurtle();
+
 }
